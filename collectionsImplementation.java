@@ -1,3 +1,29 @@
+package com.epam.Collection;
+import java.util.*;
+class Implementation{
+  public static List myList(Object[] a) {
+     return new ArrayList(a);
+  }
+}
+  class ArrayList extends AbstractList{
+  
+private Object[] x;
+
+ArrayList(Object[] array) {
+    x = array;
+}
+public Object get(int index) {
+    return x[index];
+}
+public Object set(int index, Object element) {
+    Object oldVal = x[index];
+    x[index] = element;
+    return oldVal;
+}
+public int size() {
+    return x.length;
+}
+  }
 public class collectionsImplementation{
  public static void main(String[] args) {
       try{
